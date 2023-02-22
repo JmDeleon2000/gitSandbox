@@ -15,4 +15,9 @@ COPY rebase.ipynb rebase/rebase.ipynb
 RUN mkdir log
 COPY log.ipynb log/log.ipynb
 
+RUN mkdir protocoloFile/A -p
+RUN mkdir protocoloFile/B 
+COPY protocoloFile/CuadernoA.ipynb protocoloFile/A/CuadernoA.ipynb
+COPY protocoloFile/CuadernoB.ipynb protocoloFile/B/CuadernoB.ipynb
+
 RUN mkdir repos/local -p && cd repos/local && git init --bare
